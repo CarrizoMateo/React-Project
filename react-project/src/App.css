@@ -1,0 +1,27 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: rem;
+  text-align: center;
+  width: 100%;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;            
+  padding: 0 5rem 10rem 5rem;
+}
+
+.nav-left a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.nav-left li {
+  display: block;
+}
+.nav-right {
+  font-weight: bold;
+}
+
