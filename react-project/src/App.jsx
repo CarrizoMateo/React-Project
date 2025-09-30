@@ -8,7 +8,7 @@ import CartPage from "./components/CartPage";
 export default function App() {
     return (
         <div style={styles.layout}>
-            <NavBar />
+            <NavBar/>
             <main style={styles.main}>
                 <Routes>
                     <Route path="/" element={<ItemListContainer greeting="Catálogo" />} />
