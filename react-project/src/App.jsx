@@ -4,6 +4,10 @@ import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import NotFound from "./components/NotFound";
 import CartPage from "./components/CartPage";
+import CheckoutForm from "./components/CheckoutForm";
+import { db } from "./services/firebase";
+import AdminUploader from "./components/AdminUploader";
+
 
 export default function App() {
     return (
@@ -16,6 +20,8 @@ export default function App() {
                     <Route path="/item/:itemId" element={<ItemDetailContainer />} />
                     <Route path="/cart" element={<CartPage />} />
                     <Route path="/home" element={<Navigate to="/" replace />} />
+                    <Route path="/checkout" element={<CheckoutForm />} />
+                    <Route path="/admin" element={<AdminUploader />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </main>

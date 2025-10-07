@@ -1,23 +1,37 @@
 import { Link, NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { getCategories } from "../services/products";
 import { useCart } from "../context/CartContext";
 
 
 export default function NavBar() {
-    const categories = getCategories();
+    const [categories, setCategories] = useState([]);
     const { totalItems } = useCart();
 
+useEffect(() => {
+  async function loadCategories() {
+    try {
+      const data = await getCategories();
+      console.log("Categorías:", data); // 👈 ayuda para ver si se cargan
+      setCategories(data);
+    } catch (err) {
+      console.error("Error al cargar categorías:", err);
+      setCategories([]);
+    }
+  }
+  loadCategories();
+}, []);
 
     return (
         <header style={styles.header}>
             <div style={styles.inner}>
-                <Link to="/" style={styles.brand}>RetroKits</Link>
+                <Link to="/" style={styles.brand}>La10ezShop</Link>
                 <nav style={styles.nav}>
                     <NavLink to="/" style={linkStyle}>Todo</NavLink>
-                    {categories.map((cat) => (
-                        <NavLink key={cat} to={`/category/${cat}`} style={linkStyle}>
-                            {cat}
-                        </NavLink>
+                    {Array.isArray(categories) && categories.map((cat) => (
+                    <NavLink key={cat} to={`/category/${cat}`} style={linkStyle}>
+                        {cat}
+                    </NavLink>
                     ))}
                 </nav>
                 <Link to="/cart" style={styles.cart} aria-label="Carrito">

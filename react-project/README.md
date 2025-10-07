@@ -1,12 +1,40 @@
-# React + Vite
+# La10ezShop ⚽
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Proyecto Final – Curso React JS**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧠 Sobre el proyecto
 
-## Expanding the ESLint configuration
+Soy un apasionado del fútbol, y por eso decidí inspirarme en una tienda de remeras retro de fútbol para desarrollar este e-commerce. Me encanta la historia que hay detrás de cada camiseta, y quise reflejar esa pasión creando una tienda digital que conecte con los recuerdos y emociones del fútbol.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Este proyecto fue desarrollado como entrega final del curso de React JS.
+
+---
+
+## 🚀 Funcionalidades
+
+- Catálogo de productos cargado desde Firebase Firestore
+- Filtrado dinámico por categorías (clubes)
+- Detalle individual de cada producto
+- Agregado de productos al carrito
+- Vista de carrito con resumen y total
+- Formulario de compra con guardado de orden en Firebase
+- Navegación SPA con React Router
+- Context API para manejo global del carrito
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- **React JS**
+- **Vite**
+- **Firebase Firestore**
+- **React Router DOM**
+- **Context API + useReducer**
+- **CSS (inline + estilos propios)**
+
+---
+
+## 📁 Estructura del proyecto
+

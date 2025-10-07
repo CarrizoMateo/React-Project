@@ -37,8 +37,21 @@ export default function CartPage() {
                 <div style={{ textAlign: "right" }}>
                     <div>Total ítems: <strong>{totalItems}</strong></div>
                     <div>Total: <strong>${totalPrice.toLocaleString("es-AR")}</strong></div>
+                    <Link to="/checkout" style={styles.checkoutBtn}>Finalizar compra</Link>
                 </div>
             </div>
         </section>
     );
 }
+const styles = {
+  checkoutBtn: {
+    marginTop: 12,
+    display: "inline-block",
+    background: "black",
+    color: "white",
+    padding: "0.45rem 0.8rem",
+    borderRadius: 10,
+    textDecoration: "none",
+    fontWeight: 600
+  }
+};
